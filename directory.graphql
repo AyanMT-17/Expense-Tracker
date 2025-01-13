@@ -1,0 +1,20 @@
+expense-tracker/
+├── server/
+│   ├── db.js         # PostgreSQL connection setup
+│   ├── app.js        # Express server
+│   ├── routes/
+│   │   ├── entries.js  # Routes for CRUD operations
+│   ├── views/
+│   │   ├── index.ejs   # Main page
+│   │   ├── add.ejs     # Add entry form
+│   │   ├── edit.ejs    # Edit entry form
+│   │   ├── partials/
+│   │   │   ├── header.ejs # Header component
+│   │   │   ├── footer.ejs # Footer component
+├── public/
+│   ├── css/
+│   │   ├── style.css   # Frontend styles
+│   ├── js/
+│   │   ├── app.js      # Frontend JavaScript
+├── package.json        # Node.js dependencies
+├── .env                # Environment variables
