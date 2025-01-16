@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<h1>Edit Entry</h1>
+<form method="POST" action="/entries/<%= entry.id %>?_method=PUT">
+    <label>Type:</label>
+    <select name="type">
+        <option value="Income" <%= entry.type === 'Income' ? 'selected' : '' %>>Income</option>
+        <option value="Expense" <%= entry.type === 'Expense' ? 'selected' : '' %>>Expense</option>
+    </select>
+    <label>Category:</label>
+    <input type="text" name="category" value="<%= entry.category %>" required />
+    <label>Amount:</label>
+    <input type="number" name="amount" value="<%= entry.amount %>" required />
+    <label>Description:</label>
+    <textarea name="description"><%= entry.description %></textarea>
+    <button type="submit">Update</button>
+</form>
+<%- include('partials/footer') %>

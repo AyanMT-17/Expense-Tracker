@@ -1,12 +1,13 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
+import dotenv from 'dotenv';
 import entriesRouter from './routes/entries.js';
 
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.set('view engine', 'ejs');
@@ -23,7 +24,6 @@ app.get('/', (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:${PORT}`);
 });

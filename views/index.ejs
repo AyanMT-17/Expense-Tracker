@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<h1>Expense Tracker</h1>
+<a href="/entries/add">Add New Entry</a>
+
+<ul>
+    <% entries.forEach(entry => { %>
+        <li>
+            <%= entry.type %> - <%= entry.category %> - <%= entry.amount %>
+            <a href="/entries/edit/<%= entry.id %>">Edit Entry</a>
+            <form action="/entries/<%= entry.id %>?_method=DELETE" method="POST" style="display:inline;">
+                <button type="submit" width="50px">Delete Entry</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
+
+<%- include('partials/footer') %>`

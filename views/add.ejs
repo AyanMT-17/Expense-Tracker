@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<h1>Add Entry</h1>
+<form method="POST" action="/entries">
+    <label>Type:</label>
+    <select name="type">
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
+    </select>
+    <label>Category:</label>
+    <input type="text" name="category" required />
+    <label>Amount:</label>
+    <input type="number" name="amount" required />
+    <label>Description:</label>
+    <textarea name="description"></textarea>
+    <button type="submit">Add</button>
+</form>
+<%- include('partials/footer') %>
